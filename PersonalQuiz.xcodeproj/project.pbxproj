@@ -13,6 +13,7 @@
 		7433DAFE2A3B594200CA9FDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7433DAFC2A3B594200CA9FDF /* Main.storyboard */; };
 		7433DB002A3B594300CA9FDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7433DAFF2A3B594300CA9FDF /* Assets.xcassets */; };
 		7433DB032A3B594300CA9FDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7433DB012A3B594300CA9FDF /* LaunchScreen.storyboard */; };
+		74378B942A3C59ED00C39021 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74378B932A3C59ED00C39021 /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7433DAFF2A3B594300CA9FDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7433DB022A3B594300CA9FDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7433DB042A3B594300CA9FDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74378B932A3C59ED00C39021 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,48 @@
 		7433DAF52A3B594200CA9FDF /* PersonalQuiz */ = {
 			isa = PBXGroup;
 			children = (
-				7433DAF62A3B594200CA9FDF /* AppDelegate.swift */,
-				7433DAF82A3B594200CA9FDF /* SceneDelegate.swift */,
-				7433DAFA2A3B594200CA9FDF /* ViewController.swift */,
-				7433DAFC2A3B594200CA9FDF /* Main.storyboard */,
+				7433DB0B2A3B625600CA9FDF /* ViewControllers */,
+				7433DB0D2A3B62CB00CA9FDF /* Models */,
+				7433DB0A2A3B5FDA00CA9FDF /* App */,
+				7433DB0C2A3B62A100CA9FDF /* Storyboards */,
 				7433DAFF2A3B594300CA9FDF /* Assets.xcassets */,
-				7433DB012A3B594300CA9FDF /* LaunchScreen.storyboard */,
-				7433DB042A3B594300CA9FDF /* Info.plist */,
 			);
 			path = PersonalQuiz;
+			sourceTree = "<group>";
+		};
+		7433DB0A2A3B5FDA00CA9FDF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				7433DAF62A3B594200CA9FDF /* AppDelegate.swift */,
+				7433DAF82A3B594200CA9FDF /* SceneDelegate.swift */,
+				7433DB042A3B594300CA9FDF /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		7433DB0B2A3B625600CA9FDF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7433DAFA2A3B594200CA9FDF /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7433DB0C2A3B62A100CA9FDF /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				7433DAFC2A3B594200CA9FDF /* Main.storyboard */,
+				7433DB012A3B594300CA9FDF /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		7433DB0D2A3B62CB00CA9FDF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				74378B932A3C59ED00C39021 /* Question.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7433DAFB2A3B594200CA9FDF /* ViewController.swift in Sources */,
+				74378B942A3C59ED00C39021 /* Question.swift in Sources */,
 				7433DAF72A3B594200CA9FDF /* AppDelegate.swift in Sources */,
 				7433DAF92A3B594200CA9FDF /* SceneDelegate.swift in Sources */,
 			);
@@ -289,12 +325,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 872DX7H3RP;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PersonalQuiz/Info.plist;
+				INFOPLIST_FILE = PersonalQuiz/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +339,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = bowltec.PersonalQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,12 +357,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 872DX7H3RP;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PersonalQuiz/Info.plist;
+				INFOPLIST_FILE = PersonalQuiz/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +371,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = bowltec.PersonalQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
